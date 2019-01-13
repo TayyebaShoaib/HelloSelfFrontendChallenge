@@ -1,0 +1,24 @@
+{
+  "name": "helloselffrontendchallenge",
+  "version": "1.0.0",
+  "description": "Thanks for your interest in joining the team at HelloSelf.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TayyebaShoaib/HelloSelfFrontendChallenge.git"
+  },
+  "author": "Tayyeba Shoaib",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TayyebaShoaib/HelloSelfFrontendChallenge/issues"
+  },
+  "homepage": "https://github.com/TayyebaShoaib/HelloSelfFrontendChallenge#readme",
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.6"
+  }
+}
