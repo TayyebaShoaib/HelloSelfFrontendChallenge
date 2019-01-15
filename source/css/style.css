@@ -167,12 +167,12 @@ section .shapes div.light-blue {
 section .shapes div.light-blue::before {
   content: '';
   position: absolute;
-  width: 30px;
-  height: 28px;
   background-color: #53BCEA;
   border: 5px solid #D7F0FA;
-  border-radius: 50%;
-  top: -15px;
+  width: 28px;
+	height: 28px;
+	border-radius: 48%;
+  top: -14px;
   right: -18px;
   z-index: -1;
 }
@@ -198,12 +198,12 @@ section .shapes div.pink {
 section .shapes div.pink::before {
   content: '';
   position: absolute;
-  width: 30px;
-  height: 28px;
   background-color: #EE3E85;
   border: 5px solid #F69EC2;
-  border-radius: 50%;
-  top: -15px;
+  width: 25px;
+	height: 25px;
+	border-radius: 48%;
+  top: -13px;
   left: 35px;
   z-index: -1;
 }
