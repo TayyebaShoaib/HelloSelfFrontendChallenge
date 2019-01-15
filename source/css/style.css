@@ -1,24 +1,259 @@
-body {
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  font-family: 'Oswald', sans-serif;
-  font-weight: 300;
-  line-height: 1.6;
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,600,700");
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-@supports not (display: grid) {
-  body {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.box {
+  margin: 24px;
+  border: 1px solid #d1d1d1;
+}
+
+@media (min-width: 768px) {
+  .box {
+    width: 540px;
   }
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 25px 10px 25px;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+header img:first-child {
+  margin-right: 40px;
+}
+
+header h1 {
+  color: #32239B;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+header img:last-child {
+  margin-left: auto;
+}
+
+main h2 {
+  color: #EE3E85;
+}
+
+.text h2 {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 15px 25px 0 25px;
+}
+
+.text p {
+  padding: 0 25px;
+  font-size: 17px;
+  margin-bottom: 33px;
+}
+
+main .boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+main .boxes .columns {
+  width: 30%;
+}
+
+main .boxes .columns div {
+  padding: 16px;
+  text-align: center;
+  font-weight: 600;
+}
+
+main .boxes .columns div:first-child {
+  font-size: 15px;
+}
+
+main .boxes .columns div + div {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.column-1 div {
+  color: #7BC9A5;
+}
+
+.column-1 div + div {
+  background-color: #E4F4ED;
+}
+
+.column-2 div {
+  color: #53BCEA;
+}
+
+.column-2 div + div {
+  background-color: #D7F0FA;
+}
+
+.column-3 div {
+  color: #EE3E85;
+}
+
+.column-3 div + div {
+  background-color: #F69EC2;
+}
+
+section h2 {
+  color: #53BCEA;
+}
+
+section .shapes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+section .shapes div {
+  height: 25px;
+}
+
+section .shapes div.lightest-blue {
+  background-color: #E4F4ED;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+section .shapes div.light-blue {
+  background-color: #D7F0FA;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  position: relative;
+}
+
+section .shapes div.light-blue::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 28px;
+  background-color: #53BCEA;
+  border: 5px solid #D7F0FA;
+  border-radius: 50%;
+  top: -15px;
+  right: -18px;
+  z-index: -1;
+}
+
+section .shapes div.light-blue::after {
+  content: 'amet';
+  position: absolute;
+  font-size: 13px;
+  font-weight: 600;
+  color: #53BCEA;
+  top: 28px;
+  right: -20px;
+}
+
+section .shapes div.pink {
+  background-color: #FCD5E5;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  position: relative;
+}
+
+section .shapes div.pink::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 28px;
+  background-color: #EE3E85;
+  border: 5px solid #F69EC2;
+  border-radius: 50%;
+  top: -15px;
+  left: 35px;
+  z-index: -1;
+}
+
+section .shapes div.pink::after {
+  content: 'elit';
+  position: absolute;
+  font-size: 13px;
+  font-weight: 600;
+  color: #EE3E85;
+  top: 28px;
+  left: 45px;
+}
+
+section > p {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 30px 0;
+}
+
+.buttons a {
+  text-decoration: none;
+  font-size: 13px;
+  padding: 0 60px;
+  line-height: 48px;
+  height: auto;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #32239B;
+  border-radius: 24px;
+}
+
+.buttons a:first-child {
+  background-color: #32239B;
+  color: #ffffff;
+  margin-right: 40px;
+}
+
+.buttons a:last-child {
+  background-color: #D6D3EB;
+  color: #32239B;
 }
 /*# sourceMappingURL=style.css.map */

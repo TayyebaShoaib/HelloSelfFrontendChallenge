@@ -1,0 +1,29 @@
+// variables
+
+$tablet-width: 768px;
+
+// colors
+$darkBlue: #32239B;
+$columnTwoColor: #53BCEA;
+$buttonBg: #D6D3EB;
+$columnTwoBg: #D7F0FA; 
+$columnOneBg: #E4F4ED;
+
+$columnThreeColor: #EE3E85;
+$columnThreeBg: #F69EC2;
+$shapeThreeBg: #FCD5E5;
+
+$columnOneColor: #7BC9A5;
+
+// mixins
+@mixin tablet {
+    @media(min-width: $tablet-width) {
+        @content;
+    }
+}
+
+// placeholder 
+%box {
+    width: 160px;
+    height: 50px;
+}

@@ -1,15 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700');
 @import 'helper';
-body {
-    display: grid;
-    place-items: center;
-    height: 100vh;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    line-height: 1.6;
 
-    @supports not (display: grid) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.box {
+    // width: 100%;
+    margin: 24px;
+    border: 1px solid rgb(209, 209, 209);
+
+    @include tablet {
+        width: 540px;
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 30px 25px 10px 25px;
+    border-bottom: 1px solid rgb(247, 247, 247);
+    img:first-child {
+        margin-right: 40px;
+    }
+
+    h1 {
+        color: $darkBlue;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+    img:last-child {
+        margin-left: auto;
+    }
+}
+main h2 {
+    color: $columnThreeColor;
+}
+.text {
+    h2 {
+        
+        font-size: 20px;
+        font-weight: 700;
+        padding: 15px 25px 0 25px;
+    }
+    p {
+        padding: 0 25px;
+        font-size: 17px;
+        margin-bottom: 33px;
+    }
+}
+
+main .boxes {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(247, 247, 247);
+
+    .columns {
+        width: 30%;
+        
+        div {
+            padding: 16px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        div:first-child {
+            font-size: 15px;
+        }
+
+        div + div {
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+    }
+}
+
+.column-1 {
+    div {
+        color: $columnOneColor;
+    }
+    div + div {
+        background-color: $columnOneBg;
+    }
+}
+
+.column-2 {
+    div {
+        color: $columnTwoColor;
+    }
+    div + div {
+        background-color: $columnTwoBg;
+    }
+}
+
+.column-3 {
+    div {
+        color: $columnThreeColor;
+    }
+    div + div {
+        background-color: $columnThreeBg;
+    }
+}
+
+section h2 {
+    color: $columnTwoColor;
+}
+section .shapes {
+    display: flex;
+    margin-bottom: 50px;
+    
+    div {
+        height: 25px;
+    }
+    div.lightest-blue {
+        background-color: $columnOneBg;
+        flex-grow: 1;
+    }
+    div.light-blue {
+        background-color: $columnTwoBg;
+        flex-grow: 1;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 28px;
+            background-color: $columnTwoColor;
+            border: 5px solid $columnTwoBg;
+            border-radius: 50%;
+            top: -15px;
+            right: -18px;
+            z-index: -1;
+        }
+        &::after {
+            content: 'amet';
+            position: absolute;
+            font-size: 13px;
+            font-weight: 600;
+            color: $columnTwoColor;
+            top: 28px;
+            right: -20px;
+        }
+    }
+    div.pink {
+        background-color: $shapeThreeBg;   
+        flex-grow: 1;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 28px;
+            background-color: $columnThreeColor;
+            border: 5px solid $columnThreeBg;
+            border-radius: 50%;
+            top: -15px;
+            left: 35px;
+            z-index: -1;
+        }
+        &::after {
+            content: 'elit';
+            position: absolute;
+            font-size: 13px;
+            font-weight: 600;
+            color: $columnThreeColor;
+            top: 28px;
+            left: 45px;
+        }
+    }
+}
+section > p {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    a {
+        text-decoration:none;
+        font-size:13px;
+        padding:0 60px;
+        line-height:48px;
+        height: auto;
+        display:inline-block;
+        text-align:center;
+        border: 1px solid $darkBlue;
+        border-radius: 24px;
+    }
+    a:first-child {
+        background-color: $darkBlue;
+        color: #ffffff;
+        margin-right: 40px;
+    }   
+    a:last-child {
+        background-color: $buttonBg;
+        color: $darkBlue;
     }
 }
